@@ -13,12 +13,12 @@
         <th style="text-align: left">{{ days(vaccinations.data.vaccinatedPer1k / 1000) }}</th>
       </tr>
     </table>
-    <span class="footer">
-      <span v-if="loaded">Letztes Update {{ format(vaccinations.meta.lastUpdate) }}</span><br>
+    <div class="footer">
       Zahlen
       <span v-if="loaded">des {{ vaccinations.meta.source }}s</span>
       über <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a>
-    </span>
+      <span v-if="loaded">Letztes Update {{ format(vaccinations.meta.lastUpdate) }}</span><br>
+    </div>
   </div>
 </template>
 
@@ -82,8 +82,7 @@ td, th {
 
 .footer {
   font-size: 10pt;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
+  margin: 10px auto;
+  text-align: center;
 }
 </style>
