@@ -16,8 +16,8 @@
     <div class="footer">
       Zahlen
       <span v-if="loaded">des {{ vaccinations.meta.source }}s</span>
-      über <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a>
-      <span v-if="loaded">Letztes Update {{ format(vaccinations.meta.lastUpdate) }}</span><br>
+      über <a href="https://api.corona-zahlen.org">api.corona-zahlen.org</a><br>
+      <span v-if="loaded">Letztes Update {{ format(vaccinations.meta.lastUpdate) }}</span>
     </div>
   </div>
 </template>
