@@ -6,11 +6,11 @@
     <table v-if="loaded" style="margin: 0 auto">
       <tr v-for="(state, key) in vaccinations.data.states" :key="key">
         <td>{{ state.name }}</td>
-        <td style="text-align: left">{{ days(state.vaccinatedPer1k / 1000) }}</td>
+        <td style="text-align: left">{{ days(state.quote) }}</td>
       </tr>
       <tr>
         <th>Durchschnitt Deutschland</th>
-        <th style="text-align: left">{{ days(vaccinations.data.vaccinatedPer1k / 1000) }}</th>
+        <th style="text-align: left">{{ days(vaccinations.data.quote) }}</th>
       </tr>
     </table>
     <div class="footer">
